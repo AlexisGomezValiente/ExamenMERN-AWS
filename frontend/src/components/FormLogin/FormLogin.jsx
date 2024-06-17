@@ -23,7 +23,7 @@ const Login = (props) => {
       alert("Completa los campos");
     } else {
       if (form.confirm == form.pass) {
-        const pedido = await fetch(`${props.URL}/api/user/agregar`, {
+        const pedido = await fetch(`/api/user/agregar`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -51,7 +51,7 @@ const Login = (props) => {
     if (!form.username || !form.pass) {
       alert("Completa los campos");
     } else {
-      const pedido = await fetch(`${props.URL}/api/user/verificar`, {
+      const pedido = await fetch(`/api/user/verificar`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -14,7 +14,7 @@ const Menu = (props) => {
 
   const pedir = async (estado) => {
     try {
-      const res = await fetch(`${props.URL}/api/proyecto/estado/${estado}`);
+      const res = await fetch(`/api/proyecto/estado/${estado}`);
       const proyectos = await res.json();
       setEstados((prevEstados) => ({
         ...prevEstados,
@@ -27,7 +27,7 @@ const Menu = (props) => {
 
   const cambiarEstado = async (nombre) => {
     try {
-      await fetch(`${props.URL}/api/proyecto/actualizar`, {
+      await fetch(`/api/proyecto/actualizar`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -42,7 +42,7 @@ const Menu = (props) => {
   };
 
   const eliminarProyecto = async (nombre) => {
-    await fetch(`${props.URL}/api/proyecto/eliminar/${nombre}`, {
+    await fetch(`/api/proyecto/eliminar/${nombre}`, {
       method: "DELETE",
     });
     await pedirTodosEstados();

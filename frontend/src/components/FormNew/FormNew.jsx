@@ -24,7 +24,7 @@ const FormNew = (props) => {
     e.preventDefault();
 
     if (form.nombre && form.fecha) {
-      const pedido = await fetch(`${props.URL}/api/proyecto/agregar`, {
+      const pedido = await fetch(`/api/proyecto/agregar`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -16,10 +16,8 @@ function App() {
     setLogin(false);
   };
 
-  const URL = process.env.REACT_APP_API_URL;
-
   const todosProyectos = async () => {
-    await fetch(`${URL}/api/proyectos`)
+    await fetch(`/api/proyectos`)
       .then((res) => res.json())
       .then((proyects) => {
         setProyectos(proyects);
@@ -39,7 +37,6 @@ function App() {
             <Menu
               todosProyectos={todosProyectos}
               proyectos={proyectos}
-              URL={URL}
               login={login}
               cerrarSesion={cerrarSesion}
             />
@@ -48,12 +45,12 @@ function App() {
 
         <Route
           path="nuevoProyecto"
-          element={<FormNew URL={URL} login={login} />}
+          element={<FormNew login={login} />}
         />
 
         <Route
           path="/"
-          element={<Login URL={URL} iniciarSesion={iniciarSesion} />}
+          element={<Login iniciarSesion={iniciarSesion} />}
         />
       </Routes>
     </div>
