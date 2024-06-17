@@ -1,0 +1,47 @@
+.table {
+  border-collapse: collapse;
+  margin: 20px;
+  width: 500px;
+  table-layout: fixed;
+}
+
+.table th,
+.table td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+  font-size: 20px;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  vertical-align: top;
+}
+
+.table th {
+  background-color: orange;
+  text-align: center;
+}
+
+.proyecto h2{
+  margin: 0;
+}
+
+.proyecto{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.proyecto button{
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+}
